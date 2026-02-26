@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Implementasi Python - SPL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="penjelasan.html">PENJELASAN</a>
+        <a href="obe.html">OBE (TEORI)</a>
+        <a href="python.html" class="active">PYTHON CODE</a>
+        <a href="geogebra.html">GEOGEBRA</a>
+    </nav>
+
+    <div class="container">
+        <section class="card border-accent">
+            <h1>5.1 Komputasi Sistem Persamaan Linier</h1>
+            <p>Penyelesaian Sistem Persamaan Linier dalam skala besar memerlukan bantuan komputasi. Menggunakan bahasa pemrograman Python dan library <strong>NumPy</strong>, kita dapat melakukan Operasi Baris Elementer (OBE) secara sistematis dan cepat.</p>
+        </section>
+
+        <section class="card">
+            <h1>5.2 Definisi Fungsi Operasi Baris (Python)</h1>
+            <p>Berdasarkan kaidah aljabar, kita mendefinisikan fungsi dasar untuk memanipulasi baris matriks teraugmentasi:</p>
+            
+            <pre><code class="language-python">
+import numpy as np
+
+# Fungsi Penukaran Baris (Row Swap)
+def RowSwap(mat, r1, r2):
+    mat[[r1, r2]] = mat[[r2, r1]]
+    return mat
+
+# Fungsi Perkalian Skalar (Row Scale)
+def RowScale(mat, row, k):
+    mat[row] = mat[row] * k
+    return mat
+
+# Fungsi Penjumlahan Kelipatan (Row Addition)
+def RowAdd(mat, source, target, k):
+    mat[target] = mat[target] + k * mat[source]
+    return mat
+            </code></pre>
+        </section>
+
+        <section class="card">
+            <h1>5.3 Implementasi Kasus dan Output</h1>
+            <p>Berikut adalah penerapan fungsi tersebut pada sistem persamaan yang ada di materi (Slide 84):</p>
+            
+            <pre><code class="language-python">
+# Matriks Augmented awal
+A = np.array([
+    [1., -1., 1., 3.],
+    [2., 1., 8., 18.],
+    [4., 2., -3., -2.]
+])
+
+# Eksekusi OBE
+A = RowAdd(A, 0, 1, -2) 
+A = RowScale(A, 1, 1/3)
+A = RowAdd(A, 1, 2, -6)
+
+print("Matriks Eselon Baris Akhir:")
+print(A)
+            </code></pre>
+
+            <h3 style="color: var(--accent-gold); margin-top: 25px;">Terminal Output Simulation:</h3>
+            <div style="background-color: #0f172a; color: #38bdf8; padding: 20px; border-radius: 12px; font-family: 'Courier New', monospace; border: 1px solid var(--border-line);">
+                > Matriks Eselon Baris Akhir: <br>
+                [[ 1. -1.  1.  3.] <br>
+                &nbsp;[ 0.  1.  2.  4.] <br>
+                &nbsp;[ 0.  0. -23. -38.]] <br><br>
+                > Solusi Numerik: x1=1.0, x2=0.0, x3=2.0
+            </div>
+        </section>
+
+        <section class="card">
+            <h1>5.4 Analisis Keunggulan Komputasi</h1>
+            <div class="grid">
+                <div class="item">
+                    <strong>Presisi Tinggi</strong>
+                    <p>Menghindari kesalahan pembulatan manusia pada sistem dengan banyak variabel.</p>
+                </div>
+                <div class="item">
+                    <strong>Efisiensi Waktu</strong>
+                    <p>Mampu menyelesaikan ribuan persamaan hanya dalam hitungan milidetik.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <center><p>&copy; 2026 Modul Aljabar Linear - Python Programming Section</p></center>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

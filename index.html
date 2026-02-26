@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Persamaan Linear - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">HOME</a>
+        <a href="penjelasan.html">PENJELASAN</a>
+        <a href="obe.html">OBE (TEORI)</a>
+        <a href="python.html">PYTHON CODE</a>
+        <a href="geogebra.html">GEOGEBRA</a>
+    </nav>
+
+    <div class="container">
+        <section class="card">
+            <h1>Apa itu Sistem Persamaan Linear?</h1>
+            <p>Sistem persamaan linier adalah sekumpulan dua atau lebih persamaan matematika berbentuk linier (berderajat satu) yang memiliki variabel yang sama dan harus dipenuhi secara bersamaan. Persamaan linier sendiri adalah persamaan yang setiap variabelnya hanya berpangkat satu dan tidak saling dikalikan.</p>
+            
+            <div class="math-box">
+                <strong>Bentuk Umum:</strong><br>
+                \[\begin{aligned}
+                a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+                a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+                \vdots \\
+                a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
+                \end{aligned}
+                \]
+            </div>
+
+            <h2>Matriks Representasi</h2>
+            <p>Sistem ini dapat direpresentasikan sebagai \(A \cdot X = B\), di mana:</p>
+            <ul>
+                <li><strong>A</strong>: Matriks koefisien.</li>
+                <li><strong>X</strong>: Vektor variabel.</li>
+                <li><strong>B</strong>: Vektor konstanta.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Jenis-Jenis Solusi</h2>
+            <div class="grid">
+                <div class="item"><strong>Solusi Tunggal:</strong> Hanya ada satu set nilai variabel.</div>
+                <div class="item"><strong>Tidak Ada Solusi:</strong> Sistem inkonsisten (garis sejajar).</div>
+                <div class="item"><strong>Solusi Tak Terhingga:</strong> Sistem dependen (garis berhimpit).</div>
+            </div>
+
+            <h2>Contoh Grafis (2D)</h2>
+            <div class="grid">
+                <div class="item"><strong>Garis Berpotongan:</strong> Solusi tunggal.</div>
+                <div class="item"><strong>Garis Sejajar:</strong> Tidak ada solusi.</div>
+                <div class="item"><strong>Garis Berimpit:</strong> Solusi tak terhingga.</div>
+            </div>
+
+            <h2>Metode Penyelesaian</h2>
+            <p>Metode Penyelesaian Sistem Persamaan Linear:</p>
+            <ul>
+                <li><strong>Metode Subtitusi</strong>
+                <li><strong>Metode Eliminasi</strong>
+                <li><strong>Metode Matriks (Gauss/Gauss-Jordan)</strong>
+                <li><strong>Metode Grafik</strong>
+            </ul>
+                
+            
+        </section>
+    </div>
+</body>
+</html>

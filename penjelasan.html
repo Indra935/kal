@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Penjelasan Mendalam - Sistem Persamaan Linear</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="penjelasan.html" class="active">PENJELASAN</a>
+        <a href="obe.html">OBE (TEORI)</a>
+        <a href="python.html">PYTHON CODE</a>
+        <a href="geogebra.html">GEOGEBRA</a>
+    </nav>
+
+    <div class="container">
+        <section class="card">
+            <h1>Eksplorasi Mendalam Sistem Persamaan Linear</h1>
+            <p>Sistem Persamaan Linear (SPL) bukan sekadar kumpulan angka, melainkan representasi dari titik temu berbagai kondisi atau batasan dalam matematika. Menyelesaikan SPL berarti mencari "titik keseimbangan" di mana semua persamaan terpenuhi secara simultan.</p>
+        </section>
+
+        <section class="card border-accent">
+            <h2>1.1 Analisis Konsistensi dan Jenis Solusi</h2>
+            <p>Berdasarkan keberadaan solusinya, SPL diklasifikasikan menjadi dua kategori utama:</p>
+            <div class="grid">
+                <div class="item">
+                    <strong>1. Sistem Konsisten</strong>
+                    <p>Sistem yang memiliki setidaknya satu solusi. Dibagi menjadi:</p>
+                    <ul>
+                        <li><em>Determinate:</em> Memiliki tepat satu solusi unik (Garis berpotongan).</li>
+                        <li><em>Indeterminate:</em> Memiliki tak hingga banyak solusi (Garis berhimpit).</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <strong>2. Sistem Inkonsisten</strong>
+                    <p>Sistem yang tidak memiliki solusi sama sekali. Secara geometris, ini direpresentasikan oleh garis-garis yang sejajar namun tidak berhimpit, sehingga tidak pernah ada titik temu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>1.2 Representasi Matriks Teraugmentasi (Augmented Matrix)</h2>
+            <p>Untuk efisiensi komputasi, SPL sering ditulis dalam bentuk matriks teraugmentasi. Misalkan kita memiliki sistem:</p>
+            <div class="math-box">
+                \[
+                \begin{aligned}
+                a_{11}x + a_{12}y &= b_1 \\
+                a_{21}x + a_{22}y &= b_2
+                \end{aligned}
+                \]
+            </div>
+            <p>Maka bentuk matriks teraugmentasinya adalah gabungan dari matriks koefisien \(A\) dan vektor konstanta \(B\):</p>
+            <div class="math-box">
+                \[ [A | B] = \left[ \begin{array}{cc|c} a_{11} & a_{12} & b_1 \\ a_{21} & a_{22} & b_2 \end{array} \right] \]
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>1.3 Simulasi Penyelesaian Manual: Metode Campuran</h2>
+            <p>Selesaikan SPL berikut:</p>
+            <div class="math-box">
+                (1) \( 3x + 2y = 18 \) <br>
+                (2) \( x - y = 1 \)
+            </div>
+
+            <h3>Langkah 1: Manipulasi Persamaan</h3>
+            <p>Kita gunakan metode eliminasi. Kalikan persamaan (2) dengan angka 2 agar koefisien \(y\) bisa dihilangkan:</p>
+            <div class="math-box">
+                \( (2) \times 2 \rightarrow 2x - 2y = 2 \)
+            </div>
+
+            <h3>Langkah 2: Proses Eliminasi</h3>
+            <p>Jumlahkan persamaan (1) dengan hasil manipulasi persamaan (2):</p>
+            <div class="math-box">
+                \( (3x + 2y) + (2x - 2y) = 18 + 2 \) <br>
+                \( 5x = 20 \rightarrow \mathbf{x = 4} \)
+            </div>
+
+            <h3>Langkah 3: Substitusi Balik</h3>
+            <p>Masukkan nilai \(x = 4\) ke persamaan (2) yang paling sederhana:</p>
+            <div class="math-box">
+                \( 4 - y = 1 \rightarrow y = 4 - 1 \rightarrow \mathbf{y = 3} \)
+            </div>
+            <p>Jadi, solusi sistem adalah <strong>(4, 3)</strong>.</p>
+        </section>
+
+        <section class="card">
+            <h2>1.4 Aplikasi SPL dalam dunia nyata</h2>
+            <p>Berdasarkan materi yang dipelajari, SPL bukan hanya soal angka, tapi digunakan dalam:</p>
+            <ul class="step-list">
+                <li><strong>Ekonomi:</strong> Menyeimbangkan kurva penawaran (supply) dan permintaan (demand).</li>
+                <li><strong>Fisika:</strong> Menghitung resultan gaya pada struktur bangunan.</li>
+                <li><strong>Ilmu komputer:</strong> Algoritma <em>Machine Learning</em> dan grafika komputer.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <center><p>&copy; 2026 Modul Aljabar Linear - Edisi Lengkap</p></center>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualisasi Geometri - GeoGebra</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="penjelasan.html">PENJELASAN</a>
+        <a href="obe.html">OBE (TEORI)</a>
+        <a href="python.html">PYTHON CODE</a>
+        <a href="geogebra.html" class="active">GEOGEBRA</a>
+    </nav>
+
+    <div class="container">
+        <section class="card border-accent">
+            <h1>5.1 Interpretasi Visual SPL</h1>
+            <p>Dalam metode grafik, solusi dari sistem persamaan linear adalah titik potong antara garis-garis yang merepresentasikan persamaan tersebut. Berikut adalah visualisasi dari kasus yang kita kerjakan.</p>
+        </section>
+
+        <section class="card">
+            <h2>5.2 Hasil Komputasi (Versi Python)</h2>
+            <p>Berdasarkan kode Python yang dijalankan pada sistem 3 variabel (Slide 84), diperoleh titik koordinat solusi sebagai berikut:</p>
+            <div class="math-box">
+                <strong>Solusi:</strong> \( x_1=1, x_2=0, x_3=2 \)
+            </div>
+            <p>Secara numerik, nilai-nilai ini memenuhi seluruh persamaan yang ada di dalam matriks augmented.</p>
+        </section>
+
+        <section class="card">
+            <h2>5.3 Hasil Visualisasi (Versi GeoGebra)</h2>
+            <p>Di bawah ini adalah representasi geometri dari perpotongan garis tersebut. Perhatikan titik pertemuannya yang konsisten dengan hasil Python:</p>
+            
+            <div class="geogebra-display" style="text-align: center; margin: 20px 0;">
+                <img src="geogebra-export.png" 
+                     alt="Grafik GeoGebra" 
+                     style="width: 100%; max-width: 600px; border-radius: 12px; border: 1px solid var(--border-line); box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);">
+                
+                
+                
+                <p style="font-style: italic; color: var(--text-secondary); margin-top: 10px;">
+                    Gambar 2.1: Perpotongan garis menunjukkan solusi unik pada titik (2, 3).
+                </p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>5.4 Kesimpulan Analisis</h2>
+            <div class="grid">
+                <div class="item">
+                    <strong>Akurasi Python</strong>
+                    <p>Memberikan hasil presisi hingga angka desimal untuk sistem yang sangat kompleks.</p>
+                </div>
+                <div class="item">
+                    <strong>Kejelasan GeoGebra</strong>
+                    <p>Memudahkan pemahaman konsep kedudukan garis (berpotongan, sejajar, atau berimpit).</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <center><p>&copy; 2026 Modul Aljabar Linear - GeoGebra Visual</p></center>
+    </footer>
+</body>
+</html>

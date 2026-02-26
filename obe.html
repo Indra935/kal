@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>OBE dan Eliminasi Gauss - Teori Lengkap</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="penjelasan.html">PENJELASAN</a>
+        <a href="obe.html" class="active">OBE (TEORI)</a>
+        <a href="python.html">PYTHON CODE</a>
+        <a href="geogebra.html">GEOGEBRA</a>
+    </nav>
+
+    <div class="container">
+        <section class="card">
+            <h1>Operasi Baris Elementer (OBE)</h1>
+            <p>Operasi Baris Elementer adalah serangkaian langkah matematis yang digunakan untuk mentransformasi matriks tanpa mengubah solusi dari sistem persamaan linear tersebut. Metode ini merupakan inti dari algoritma Eliminasi Gauss.</p>
+            
+            <h3>Tiga Aturan Utama OBE:</h3>
+            <div class="grid">
+                <div class="item">
+                    <strong>1. Pertukaran Baris</strong><br>
+                    Menukarkan posisi dua baris (persamaan) dalam matriks. <br>
+                    <em>Simbol: \(R_i \leftrightarrow R_j\)</em>
+                </div>
+                <div class="item">
+                    <strong>2. Perkalian Skalar</strong><br>
+                    Mengalikan suatu baris dengan bilangan real apa pun yang bukan nol. <br>
+                    <em>Simbol: \(k \cdot R_i\)</em>
+                </div>
+                <div class="item">
+                    <strong>3. Penjumlahan Baris</strong><br>
+                    Menggantikan suatu baris dengan hasil penjumlahan baris itu sendiri dengan kelipatan baris lainnya. <br>
+                    <em>Simbol: \(R_i + k \cdot R_j\)</em>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2.1 Tahapan Eliminasi Gauss & Gauss-Jordan</h2>
+            <p>Tujuan akhir dari OBE adalah mengubah matriks menjadi salah satu dari dua bentuk berikut:</p>
+            <ul>
+                <li><strong>Matriks Eselon Baris:</strong> Membentuk pola tangga di mana elemen di bawah "Utama 1" adalah nol.</li>
+                <li><strong>Matriks Eselon Baris Terreduksi:</strong> Lanjutan dari eselon baris di mana elemen di atas "Utama 1" juga bernilai nol (Metode Gauss-Jordan).</li>
+            </ul>
+
+            <div class="math-box">
+                <strong>Alur Kerja:</strong><br>
+                Matriks Koefisien \((A|B)\) \(\rightarrow\) OBE \(\rightarrow\) Matriks Eselon \(\rightarrow\) Substitusi Balik.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2.2 Studi Kasus: Sistem 3 Variabel</h2>
+            <p>Berdasarkan contoh pada materi, mari kita lihat transformasi sistem berikut:</p>
+            <div class="math-box">
+                \[
+                \begin{aligned}
+                x_1 - x_2 + x_3 &= 3 \\
+                2x_1 + x_2 + 8x_3 &= 18 \\
+                4x_1 + 2x_2 - 3x_3 &= -2
+                \end{aligned}
+                \]
+            </div>
+            
+            <h3>Langkah Penyelesaian Manual:</h3>
+            <ol>
+                <li><strong>Matriks Augmented:</strong> Menyusun angka ke dalam baris dan kolom \((A|B)\).</li>
+                <li><strong>Eliminasi Kolom 1:</strong> Menggunakan baris pertama untuk membuat nol di bawah angka 1 pada kolom pertama.</li>
+                <li><strong>Eliminasi Kolom 2:</strong> Mencari pivot baru di baris kedua dan membuat nol di bawahnya.</li>
+                <li><strong>Substitusi Balik:</strong> Setelah didapat \(x_3 = 2\), nilai ini dimasukkan ke persamaan di atasnya untuk mencari \(x_2\) dan \(x_1\).</li>
+            </ol>
+            
+            
+            
+            <div class="item" style="background-color: #fef3c7; border-left: 4px solid #f59e0b; margin-top: 15px;">
+                <strong>Hasil Akhir:</strong> Berdasarkan perhitungan manual, didapatkan solusi tunggal: \(x_1 = 1, x_2 = 0, x_3 = 2\).
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <center><p>&copy; 2026 Modul Aljabar Linear - Materi OBE </p></center>
+    </footer>
+</body>
+</html>
